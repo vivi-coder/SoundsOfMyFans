@@ -36,7 +36,7 @@ def apply_decay_every_3_seconds(satellite_data, randomtime)
             
             # Pick a different satellite for signal_strength decay
             signal_satellite = satellite_data.keys.sample
-            signal_decay = [-13, -16, -18].sample
+            signal_decay = [-7, -9, -12].sample
             satellite_data[signal_satellite]["signal_strength"] = [satellite_data[signal_satellite]["signal_strength"] + signal_decay, 0].max
         end  # Added missing 'end' for loop
     end
@@ -119,6 +119,7 @@ if satellite_data.values.any? { |stats| stats["health_percentage"] <= 0 }
     puts "NEW EMAIL:"
     sleep(1)
     puts "Vivi: 'Hey, man, I know you are trying to but like.. one of the satellites has reached 0% health, I don't have money to buy another one so... Your FIRED!"
+    break
     end
   end  
 end
