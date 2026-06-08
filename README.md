@@ -14,7 +14,7 @@ cd SoundsOfMyFansSpinning
 ruby SoundsOfMyFans.rb  
 
 
-Im using ruby 3.4.8
+I am using ruby 3.4.8 to run this project
 
 Versions tested on: Termux, Ruby 3.4.1  
   
